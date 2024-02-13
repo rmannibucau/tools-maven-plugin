@@ -237,7 +237,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Open Sans", serif;
-    font-size: 14px;
+    font-size: 1.1em;
     font-style: normal;
     line-height: 1.42857143;
     position: relative;
@@ -389,6 +389,8 @@ a img {
 
 p {
     font-family: inherit;
+    font-weight: 400;
+    font-size: 1em;
     line-height: 1.6;
     margin-bottom: 1.25em;
     text-rendering: optimizeLegibility
@@ -504,7 +506,7 @@ ul li ul,
 ul li ol {
     margin-left: 1.25em;
     margin-bottom: 0;
-    font-size: 1em;
+    font-size: 1em
 }
 
 ul.square li ul,
@@ -827,9 +829,6 @@ p a > code:hover {
     height: 120px;
     padding-top: 30px;
     padding-bottom: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 .footer a {
@@ -961,7 +960,6 @@ body.toc2 #header > h1:nth-last-child(2) {
 }
 
 #toc ul {
-    font-family: "Droid Serif", "DejaVu Sans", sans-serif;
     list-style-type: none
 }
 
