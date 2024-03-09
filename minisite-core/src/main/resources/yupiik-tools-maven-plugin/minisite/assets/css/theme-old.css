@@ -1,77 +1,3 @@
-/*@import "https://fonts.googleapis.com/css?family=Open+Sans:400,700%7cDroid+Serif:400,700";*/
-
-:root {
-    /* YUPIIK colors (from dark to light) */
-    --yupiik-blue1: #0b4672;
-    --yupiik-blue2: #0075ba;
-    --yupiik-blue3: #50aee2;
-
-    --yupiik-color-white: #fff;
-    --yupiik-color-black: #000;
-
-    --yupiik-color-gray-0: var(--yupiik-color-white);
-    --yupiik-color-gray-100: #f5f6f7;
-    --yupiik-color-gray-200: #ebedf0;
-    --yupiik-color-gray-300: #dadde1;
-    --yupiik-color-gray-400: #ccd0d5;
-    --yupiik-color-gray-500: #bec3c9;
-    --yupiik-color-gray-600: #8d949e;
-    --yupiik-color-gray-700: #606770;
-    --yupiik-color-gray-800: #444950;
-    --yupiik-color-gray-900: #1c1e21;
-    --yupiik-color-gray-1000: var(--yupiik-color-black);
-
-    --yupiik-color-emphasis-0: var(--yupiik-color-gray-0);
-    --yupiik-color-emphasis-100: var(--yupiik-color-gray-100);
-    --yupiik-color-emphasis-200: var(--yupiik-color-gray-200);
-    --yupiik-color-emphasis-300: var(--yupiik-color-gray-300);
-    --yupiik-color-emphasis-400: var(--yupiik-color-gray-400);
-    --yupiik-color-emphasis-500: var(--yupiik-color-gray-500);
-    --yupiik-color-emphasis-600: var(--yupiik-color-gray-600);
-    --yupiik-color-emphasis-700: var(--yupiik-color-gray-700);
-    --yupiik-color-emphasis-800: var(--yupiik-color-gray-800);
-    --yupiik-color-emphasis-900: var(--yupiik-color-gray-900);
-    --yupiik-color-emphasis-1000: var(--yupiik-color-gray-1000);
-    --yupiik-color-content: var(--yupiik-color-emphasis-900);
-
-    --yupiik-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    --yupiik-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-    --yupiik-font-size-base: 100%;
-
-    --yupiik-font-weight-light: 300;
-    --yupiik-font-weight-normal: 400;
-    --yupiik-font-weight-semibold: 500;
-    --yupiik-font-weight-bold: 700;
-
-    --yupiik-font-weight-base: var(--yupiik-font-weight-normal);
-    --yupiik-line-height-base: 1.65;
-    --yupiik-font-weight-light: 300;
-    --yupiik-font-weight-normal: 400;
-    --yupiik-font-weight-semibold: 500;
-    --yupiik-font-weight-bold: 700;
-
-    --yupiik-font-weight-base: var(--yupiik-font-weight-normal);
-    --yupiik-line-height-base: 1.65;
-
-    --yupiik-global-spacing: 1rem;
-    --yupiik-spacing-vertical: var(--yupiik-global-spacing);
-    --yupiik-spacing-horizontal: var(--yupiik-global-spacing);
-
-    --yupiik-h1-font-size: 2rem;
-    --yupiik-h2-font-size: 1.5rem;
-    --yupiik-h3-font-size: 1.25rem;
-    --yupiik-h4-font-size: 1rem;
-    --yupiik-h5-font-size: 0.875rem;
-    --yupiik-h6-font-size: 0.85rem;
-
-    --yupiik-heading-color: var(--yupiik-blue1);
-    --yupiik-heading-margin-top: 0;
-    --yupiik-heading-margin-bottom: var(--yupiik-spacing-vertical);
-    --yupiik-heading-font-family: var(--yupiik-font-family-base);
-    --yupiik-heading-font-weight: var(--yupiik-font-weight-bold);
-    --yupiik-heading-line-height: 1.25;
-}
-
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -103,6 +29,7 @@ h6 {
 .page {
     display: flex;
     justify-content: center;
+    margin-bottom: 130px;
 }
 caption {
     color: #74B5FC !important;
@@ -198,7 +125,6 @@ span.theme-icon-holder > i.fas {
 
 .social-list li {
     font-size: 1.125rem;
-    background: #ECF5FF;
     width: 32px;
     height: 32px;
     text-align: center;
@@ -207,7 +133,7 @@ span.theme-icon-holder > i.fas {
 }
 
 .social-list li a {
-    color: #1845AA
+    color: #FFFFFF !important
 }
 
 .social-list li a:hover {
@@ -479,51 +405,10 @@ div.colist.arabic > ol > li > p {
 .copy-code-button {
     right: 0;
     position: absolute;
-    color: white;
     border: none;
 }
 .listingblock code[data-lang]:before {
     right: unset;
     left: 1rem;
     top: 0.2rem;
-}
-
-/* for page-footer-nav templates */
-.page-footer-nav {
-  grid-gap: 1rem;
-  gap: 1rem;
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-}
-.page-footer-nav > a {
-  border: 1px solid lightgrey;
-  border-radius: .4rem;
-  display: block;
-  height: 100%;
-  line-height: 1.65;
-  padding: 1rem;
-  transition: border-color 200ms cubic-bezier(0.08,0.52,0.52,1);
-  text-decoration: none;
-}
-.page-footer-nav > a > div:first-child {
-  color: grey;
-  font-size: .875rem;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-}
-.page-footer-nav > a > div:last-child {
-  font-size: 1rem;
-  font-weight: 700;
-  word-break: break-word;
-}
-.page-footer-nav > a.page-footer-nav-link-next {
-  grid-column: 2/3;
-  text-align: right;
-}
-.page-footer-nav > a.page-footer-nav-link-prev > div:last-child:before {
-  content: "« ";
-}
-.page-footer-nav > a.page-footer-nav-link-next > div:last-child:after {
-  content: " »";
 }
