@@ -1,12 +1,76 @@
-/*
-// YUPIIK colors (from dark to light) :
-//
-// blue1 : 0b4672
-// blue2 : 0075ba
-// blue3 : 50aee2
-//
- */
-@import "https://fonts.googleapis.com/css?family=Open+Sans:400,700%7cDroid+Serif:400,700";
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:400,700%7cDroid+Serif:400,700";*/
+
+:root {
+    /* YUPIIK colors (from dark to light) */
+    --yupiik-blue1: #0b4672;
+    --yupiik-blue2: #0075ba;
+    --yupiik-blue3: #50aee2;
+
+    --yupiik-color-white: #fff;
+    --yupiik-color-black: #000;
+    
+    --yupiik-color-gray-0: var(--yupiik-color-white);
+    --yupiik-color-gray-100: #f5f6f7;
+    --yupiik-color-gray-200: #ebedf0;
+    --yupiik-color-gray-300: #dadde1;
+    --yupiik-color-gray-400: #ccd0d5;
+    --yupiik-color-gray-500: #bec3c9;
+    --yupiik-color-gray-600: #8d949e;
+    --yupiik-color-gray-700: #606770;
+    --yupiik-color-gray-800: #444950;
+    --yupiik-color-gray-900: #1c1e21;
+    --yupiik-color-gray-1000: var(--yupiik-color-black);
+    
+    --yupiik-color-emphasis-0: var(--yupiik-color-gray-0);
+    --yupiik-color-emphasis-100: var(--yupiik-color-gray-100);
+    --yupiik-color-emphasis-200: var(--yupiik-color-gray-200);
+    --yupiik-color-emphasis-300: var(--yupiik-color-gray-300);
+    --yupiik-color-emphasis-400: var(--yupiik-color-gray-400);
+    --yupiik-color-emphasis-500: var(--yupiik-color-gray-500);
+    --yupiik-color-emphasis-600: var(--yupiik-color-gray-600);
+    --yupiik-color-emphasis-700: var(--yupiik-color-gray-700);
+    --yupiik-color-emphasis-800: var(--yupiik-color-gray-800);
+    --yupiik-color-emphasis-900: var(--yupiik-color-gray-900);
+    --yupiik-color-emphasis-1000: var(--yupiik-color-gray-1000);
+    --yupiik-color-content: var(--yupiik-color-emphasis-900);
+
+    --yupiik-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --yupiik-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --yupiik-font-size-base: 100%;
+
+    --yupiik-font-weight-light: 300;
+    --yupiik-font-weight-normal: 400;
+    --yupiik-font-weight-semibold: 500;
+    --yupiik-font-weight-bold: 700;
+
+    --yupiik-font-weight-base: var(--yupiik-font-weight-normal);
+    --yupiik-line-height-base: 1.65;
+    --yupiik-font-weight-light: 300;
+    --yupiik-font-weight-normal: 400;
+    --yupiik-font-weight-semibold: 500;
+    --yupiik-font-weight-bold: 700;
+    
+    --yupiik-font-weight-base: var(--yupiik-font-weight-normal);
+    --yupiik-line-height-base: 1.65;
+    
+    --yupiik-global-spacing: 1rem;
+    --yupiik-spacing-vertical: var(--yupiik-global-spacing);
+    --yupiik-spacing-horizontal: var(--yupiik-global-spacing);
+
+    --yupiik-h1-font-size: 2rem;
+    --yupiik-h2-font-size: 1.5rem;
+    --yupiik-h3-font-size: 1.25rem;
+    --yupiik-h4-font-size: 1rem;
+    --yupiik-h5-font-size: 0.875rem;
+    --yupiik-h6-font-size: 0.85rem;
+    
+    --yupiik-heading-color: var(--yupiik-blue1);
+    --yupiik-heading-margin-top: 0;
+    --yupiik-heading-margin-bottom: var(--yupiik-spacing-vertical);
+    --yupiik-heading-font-family: var(--yupiik-font-family-base);
+    --yupiik-heading-font-weight: var(--yupiik-font-weight-bold);
+    --yupiik-heading-line-height: 1.25;
+}
 
 body {
     height: 100% !important;
@@ -57,28 +121,25 @@ script {
 }
 
 html {
-    font-family: "Open Sans", serif;
+    font: var(--yupiik-font-size-base) / var(--yupiik-line-height-base) var(--yupiik-font-family-base);
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
 
 a {
     background: transparent;
-    color: #0075ba;
+    color: var(--yupiik-blue2);
+    text-decoration: none;
 }
 
 a:focus {
-    outline: thin dotted
+    outline: thin dotted;
 }
 
 a:active,
 a:hover {
-    outline: 0
-}
-
-h1 {
-    font-size: 2em;
-    margin: .67em 0
+    outline: 0;
+    text-decoration: underline;
 }
 
 abbr[title] {
@@ -226,31 +287,6 @@ table {
     box-sizing: border-box
 }
 
-html,
-body {
-    /*font-size: 100%*/
-}
-
-body {
-    background: #fff;
-    color: #333;
-    padding: 0;
-    margin: 0;
-    font-family: "Open Sans", serif;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 1.42857143;
-    position: relative;
-    cursor: auto;
-    tab-size: 4;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased
-}
-
-a:hover {
-    cursor: pointer
-}
-
 img,
 object,
 embed {
@@ -340,7 +376,7 @@ table.tableblock > .title,
 .qlist > .title,
 .hdlist > .title {
     line-height: 1.45;
-    color: #50aee2;
+    color: var(--yupiik-blue3);
     font-weight: 400;
     margin-top: 0;
     margin-bottom: .25em
@@ -373,18 +409,22 @@ td {
 }
 
 a {
-    color: #5c6bc0 !important;
+    color: var(--yupiik-blue1);
     text-decoration: underline;
-    line-height: inherit
+    line-height: inherit;
 }
 
 a:hover,
 a:focus {
-    color: #0075ba;
+    color: var(--yupiik-blue2);
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 a img {
-    border: none
+    border: none;
 }
 
 p {
@@ -400,24 +440,6 @@ p aside {
     font-style: italic
 }
 
-h1,
-h2,
-h3,
-#toctitle,
-.sidebarblock > .content > .title,
-h4,
-h5,
-h6 {
-    font-family: "Ubuntu", sans-serif !important;
-    font-weight: 600 !important;
-    color: #0b4672 !important;
-    text-rendering: optimizeLegibility;
-    margin-top: 1em;
-    margin-bottom: .5em;
-    line-height: 1.0125em;
-    text-transform: uppercase;
-}
-
 h1 small,
 h2 small,
 h3 small,
@@ -427,31 +449,51 @@ h4 small,
 h5 small,
 h6 small {
     font-size: 60%;
-    color: #0b4672;
+    color: var(--yupiik-blue1);
     line-height: 0
 }
 
-h1 {
-    font-size: 2.125em
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--yupiik-heading-color);
+  font-family: var(--yupiik-heading-font-family);
+  font-weight: var(--yupiik-heading-font-weight);
+  line-height: var(--yupiik-heading-line-height);
+  margin: var(--yupiik-heading-margin-top) 0 var(--yupiik-heading-margin-bottom) 0;
 }
 
+h1 {
+    font-size: var(--yupiik-h1-font-size);
+  }
+
 h2 {
-    font-size: 1.6875em
-}
+    font-size: var(--yupiik-h2-font-size);
+  }
+
+h3 {
+    font-size: var(--yupiik-h3-font-size);
+  }
+
+h4 {
+    font-size: var(--yupiik-h4-font-size);
+  }
+
+h5 {
+    font-size: var(--yupiik-h5-font-size);
+  }
+
+h6 {
+    font-size: var(--yupiik-h6-font-size);
+  }
 
 h3,
 #toctitle,
 .sidebarblock > .content > .title {
     font-size: 1.375em
-}
-
-h4,
-h5 {
-    font-size: 1.125em
-}
-
-h6 {
-    font-size: 1em
 }
 
 hr {
@@ -482,7 +524,7 @@ small {
 code {
     font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
     font-weight: 400;
-    color: #50aee2;
+    color: var(--yupiik-blue3);
 }
 
 ul,
@@ -716,7 +758,7 @@ h6 strong {
 pre,
 pre > code {
     line-height: 1.45;
-    color: #50aee2;
+    color: var(--yupiik-blue3);
     font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
     font-weight: 400;
     text-rendering: optimizeSpeed
@@ -804,7 +846,7 @@ b.button::after {
 }
 
 p a > code:hover {
-    color: #50aee2;
+    color: var(--yupiik-blue3);
 }
 
 #header,
@@ -870,7 +912,7 @@ p a > code:hover {
 }
 
 #header > h1:first-child {
-    color: #0b4672;
+    color: var(--yupiik-blue1);
     margin-top: 2.25rem;
     margin-bottom: 0
 }
@@ -979,7 +1021,7 @@ body.toc2 #header > h1:nth-last-child(2) {
 }
 
 #toctitle {
-    color: #0b4672;
+    color: var(--yupiik-blue1);
     font-size: 1.2em
 }
 
@@ -1330,7 +1372,7 @@ table.tableblock #preamble > .sectionbody > [class="paragraph"]:first-of-type p 
 }
 
 .sidebarblock > .content > .title {
-    color: #0b4672;
+    color: var(--yupiik-blue1);
     margin-top: 0;
     text-align: center
 }
@@ -1480,131 +1522,6 @@ pre.pygments .lineno {
 table.pyhltable .linenodiv {
     background: none !important;
     padding-right: 0 !important
-}
-
-.quoteblock {
-    margin: 0 1em 1.25em 1.5em;
-    display: table
-}
-
-.quoteblock > .title {
-    margin-left: -1.5em;
-    margin-bottom: .75em
-}
-
-.quoteblock blockquote,
-.quoteblock blockquote p {
-    color: rgba(0, 0, 0, .85);
-    font-size: 1.05rem;
-    line-height: 1.75;
-    word-spacing: .1em;
-    letter-spacing: 0;
-    font-style: italic;
-    text-align: justify
-}
-
-.quoteblock blockquote {
-    margin: 0;
-    padding: 0;
-    border: 0
-}
-
-.quoteblock blockquote::before {
-    content: "\201c";
-    float: left;
-    font-size: 2.75em;
-    font-weight: bold;
-    line-height: .6em;
-    margin-left: -.6em;
-    color: #0b4672;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, .1)
-}
-
-.quoteblock blockquote > .paragraph:last-child p {
-    margin-bottom: 0
-}
-
-.quoteblock .attribution {
-    margin-top: .5em;
-    margin-right: .5ex;
-    text-align: right
-}
-
-.quoteblock .quoteblock {
-    margin-left: 0;
-    margin-right: 0;
-    padding: .5em 0;
-    border-left: 3px solid rgba(0, 0, 0, .6)
-}
-
-.quoteblock .quoteblock blockquote {
-    padding: 0 0 0 .75em
-}
-
-.quoteblock .quoteblock blockquote::before {
-    display: none
-}
-
-.verseblock {
-    margin: 0 1em 1.25em
-}
-
-.verseblock pre {
-    font-family: "Source Sans Pro", "DejaVu Sans", sans;
-    font-size: 1.15rem;
-    color: rgba(0, 0, 0, .85);
-    font-weight: 300;
-    text-rendering: optimizeLegibility
-}
-
-.verseblock pre strong {
-    font-weight: 400
-}
-
-.verseblock .attribution {
-    margin-top: 1.25rem;
-    margin-left: .5ex
-}
-
-.quoteblock .attribution,
-.verseblock .attribution {
-    font-size: .9375em;
-    line-height: 1.45;
-    font-style: italic
-}
-
-.quoteblock .attribution br,
-.verseblock .attribution br {
-    display: none
-}
-
-.quoteblock .attribution cite,
-.verseblock .attribution cite {
-    display: block;
-    letter-spacing: -.025em;
-    color: rgba(0, 0, 0, .6)
-}
-
-.quoteblock.abstract {
-    margin: 0 1em 1.25em;
-    display: block
-}
-
-.quoteblock.abstract > .title {
-    margin: 0 0 .375em;
-    font-size: 1.15em;
-    text-align: center
-}
-
-.quoteblock.abstract blockquote,
-.quoteblock.abstract blockquote p {
-    word-spacing: 0;
-    line-height: 1.6
-}
-
-.quoteblock.abstract blockquote::before,
-.quoteblock.abstract p::before {
-    display: none
 }
 
 table.tableblock {
@@ -2584,6 +2501,10 @@ div.anchors > div {
     margin-bottom: 0;
 }
 
+.card-text {
+    color: var(--yupiik-color-emphasis-700);
+}
+
 .card-text:last-child {
     margin-bottom: 0;
 }
@@ -2622,8 +2543,8 @@ div.anchors > div {
 
 .page-navigation-left i {
     padding-right: 5px;
-    color: #0b4672 !important;
-    font-size: 1.5em;
+    color: var(--yupiik-blue1) !important;
+    font-size: 1.0em;
     width: 1.75em;
 }
 
