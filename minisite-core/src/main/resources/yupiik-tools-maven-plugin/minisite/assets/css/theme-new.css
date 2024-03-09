@@ -237,7 +237,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Open Sans", serif;
-    font-size: 14px;
+    font-size: 1.1em;
     font-style: normal;
     line-height: 1.42857143;
     position: relative;
@@ -389,6 +389,8 @@ a img {
 
 p {
     font-family: inherit;
+    font-weight: 400;
+    font-size: 1em;
     line-height: 1.6;
     margin-bottom: 1.25em;
     text-rendering: optimizeLegibility
@@ -504,7 +506,7 @@ ul li ul,
 ul li ol {
     margin-left: 1.25em;
     margin-bottom: 0;
-    font-size: 1em;
+    font-size: 1em
 }
 
 ul.square li ul,
@@ -827,9 +829,6 @@ p a > code:hover {
     height: 120px;
     padding-top: 30px;
     padding-bottom: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 .footer a {
@@ -961,7 +960,6 @@ body.toc2 #header > h1:nth-last-child(2) {
 }
 
 #toc ul {
-    font-family: "Droid Serif", "DejaVu Sans", sans-serif;
     list-style-type: none
 }
 
@@ -2678,45 +2676,3 @@ div.anchors > div {
     position: inherit;
     left: 5px;
 }
-
-
-/* for page-footer-nav templates */
-.page-footer-nav {
-  grid-gap: 1rem;
-  gap: 1rem;
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-}
-.page-footer-nav > a {
-  border: 1px solid lightgrey;
-  border-radius: .4rem;
-  display: block;
-  height: 100%;
-  line-height: 1.65;
-  padding: 1rem;
-  transition: border-color 200ms cubic-bezier(0.08,0.52,0.52,1);
-  text-decoration: none;
-}
-.page-footer-nav > a > div:first-child {
-  color: grey;
-  font-size: .875rem;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-}
-.page-footer-nav > a > div:last-child {
-  font-size: 1rem;
-  font-weight: 700;
-  word-break: break-word;
-}
-.page-footer-nav > a.page-footer-nav-link-next {
-  grid-column: 2/3;
-  text-align: right;
-}
-.page-footer-nav > a.page-footer-nav-link-prev > div:last-child:before {
-  content: "« ";
-}
-.page-footer-nav > a.page-footer-nav-link-next > div:last-child:after {
-  content: " »";
-}
-
