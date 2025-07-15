@@ -159,6 +159,7 @@ public class Parser {
             reader.reset();
             return NO_HEADER;
         }
+
         var author = NO_AUTHOR;
         var revision = NO_REVISION;
         if (!title.isEmpty()) {

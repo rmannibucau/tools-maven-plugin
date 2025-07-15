@@ -102,7 +102,7 @@ public class AsciidoctorLikeHtmlRenderer implements Visitor<String> {
         this.resolver = dataUri ?
                 (configuration.getResolver() == null ? new DataResolver(assetsDir(configuration, "imagesdir")) : configuration.getResolver()) :
                 null;
-        this.imagesDir = configuration.getAttributes().getOrDefault("imagesdir", "");
+        this.imagesDir = configuration.getAttributes().getOrDefault("", "");
     }
 
     private Path assetsDir(final Configuration configuration, final String attribute) {
@@ -880,9 +880,10 @@ public class AsciidoctorLikeHtmlRenderer implements Visitor<String> {
 
     // todo: enhance
     protected void visitXref(final Macro element) {
-        final var outFileSuffix = configuration.getAttributes().getOrDefault("outfilesuffix", ".html");
-        final var relFilePrefix = configuration.getAttributes().getOrDefault("relfileprefix", "");
-        final var relFileSuffix = configuration.getAttributes().getOrDefault("relfilesuffix", outFileSuffix);
+        final var attributes = state.document.header().attributes();
+        final var outFileSuffix = attr("outfilesuffix", "outfilesuffix", ".html", attributes);
+        final var relFilePrefix = attr("relfileprefix", "relfileprefix", "", attributes);
+        final var relFileSuffix = attr("relfilesuffix", "relfilesuffix", outFileSuffix, attributes);
         var target = element.label();
         final int anchor = target.lastIndexOf('#');
         if (anchor > 0) {
